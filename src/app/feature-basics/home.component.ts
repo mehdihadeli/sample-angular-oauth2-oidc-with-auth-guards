@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-
+import { Component } from '@angular/core';
 import { ApiService } from '../shared/api.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +9,7 @@ import { ApiService } from '../shared/api.service';
     - {{ apiResponse | async }}
   </p>`,
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   apiResponse: Observable<string>;
 
   constructor(private apiService: ApiService) { }

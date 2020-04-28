@@ -33,7 +33,6 @@ import { AuthService } from './core/auth.service';
         <tr><th>IsDoneLoading</th><td><code>{{isDoneLoading | async}}</code></td></tr>
         <tr><th>CanActivateProtectedRoutes</th><td><code>{{canActivateProtectedRoutes | async}}</code></td></tr>
         <tr><th>IdentityClaims</th><td class="pre"><code>{{identityClaims | json}}</code></td></tr>
-        <tr><th>RefreshToken</th><td><code class="break-all">{{refreshToken}}</code></td></tr>
         <tr><th>AccessToken</th><td><code class="break-all">{{accessToken}}</code></td></tr>
         <tr><th>IdToken</th><td><code class="break-all">{{idToken}}</code></td></tr>
       </table>
@@ -67,7 +66,6 @@ export class AppComponent {
 
   get hasValidToken() { return this.authService.hasValidToken(); }
   get accessToken() { return this.authService.accessToken; }
-  get refreshToken() { return this.authService.refreshToken; }
   get identityClaims() { return this.authService.identityClaims; }
   get idToken() { return this.authService.idToken; }
 }
